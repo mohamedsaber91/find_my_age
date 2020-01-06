@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/birth_year_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_birth_year"
+            android:textSize="28sp"
+            android:inputType="number"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_age"
+            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/birth_year_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="90dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/find_age_btn"
+            android:text="@string/my_age"
+            app:layout_constraintTop_toBottomOf="@id/birth_year_text"
+            app:layout_constraintBottom_toTopOf="@id/view_age"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="90dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_action_refresh"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toTopOf="@id/find_age_btn"
+            app:layout_constraintBottom_toBottomOf="@id/find_age_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/find_age_btn"
+            android:id="@+id/refresh_btn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
